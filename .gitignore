@@ -1,0 +1,7 @@
+# hashlink built file
+*.hl
+
+# bullshit
+export/
+dump/
+*.tmp/

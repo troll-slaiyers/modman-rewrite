@@ -1,0 +1,9 @@
+-cp source
+-lib heaps
+-lib format
+-lib hlsdl
+-hl fuck.hl
+-D windowSize=1280x720
+-dce no
+--macro include("modchart.modifiers")
+-main Main

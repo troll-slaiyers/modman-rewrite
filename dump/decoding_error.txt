@@ -1,0 +1,610 @@
+[{
+	access: []
+	doc: null
+	kind: FVar(TPath({
+		name: ModifierValue
+		pack: []
+		params: []
+		sub: null
+	}), {
+		expr: EConst(CFloat(0.0, null))
+		pos: #pos
+	})
+	meta: []
+	name: drunk
+	pos: #pos
+}, {
+	access: []
+	doc: null
+	kind: FVar(TPath({
+		name: ModifierValue
+		pack: []
+		params: []
+		sub: null
+	}), {
+		expr: EConst(CInt(0, null))
+		pos: #pos
+	})
+	meta: []
+	name: drunky
+	pos: #pos
+}, {
+	access: []
+	doc: null
+	kind: FVar(TPath({
+		name: ModifierValue
+		pack: []
+		params: []
+		sub: null
+	}), {
+		expr: EConst(CInt(0, null))
+		pos: #pos
+	})
+	meta: []
+	name: drunkz
+	pos: #pos
+}, {
+	access: []
+	doc: null
+	kind: FVar(TPath({
+		name: ModifierValue
+		pack: []
+		params: []
+		sub: null
+	}), {
+		expr: EConst(CInt(0, null))
+		pos: #pos
+	})
+	meta: []
+	name: tipsyX
+	pos: #pos
+}, {
+	access: []
+	doc: null
+	kind: FVar(TPath({
+		name: ModifierValue
+		pack: []
+		params: []
+		sub: null
+	}), {
+		expr: EConst(CInt(0, null))
+		pos: #pos
+	})
+	meta: []
+	name: tipsy
+	pos: #pos
+}, {
+	access: []
+	doc: null
+	kind: FVar(TPath({
+		name: Array
+		pack: []
+		params: [TPType(TPath({
+			name: ModifierValue
+			pack: []
+			params: []
+			sub: null
+		}))]
+		sub: null
+	}), {
+		expr: EArrayDecl([])
+		pos: #pos
+	})
+	meta: [{
+		name: :columnModifier
+		params: []
+		pos: #pos
+	}]
+	name: drunkColumns
+	pos: #pos
+}, {
+	access: []
+	doc: null
+	kind: FVar(TPath({
+		name: ModifierValue
+		pack: []
+		params: []
+		sub: null
+	}), {
+		expr: EConst(CInt(0, null))
+		pos: #pos
+	})
+	meta: [{
+		name: :alias
+		params: [{
+			expr: EConst(CString(tipz, DoubleQuotes))
+			pos: #pos
+		}]
+		pos: #pos
+	}]
+	name: tipsyz
+	pos: #pos
+}, {
+	access: [AOverride, APublic]
+	doc: null
+	kind: FFun({
+		args: [{
+			meta: []
+			name: time
+			opt: false
+			type: TPath({
+				name: Float
+				pack: []
+				params: []
+				sub: null
+			})
+			value: null
+		}, {
+			meta: []
+			name: beat
+			opt: false
+			type: TPath({
+				name: Float
+				pack: []
+				params: []
+				sub: null
+			})
+			value: null
+		}, {
+			meta: []
+			name: distance
+			opt: false
+			type: TPath({
+				name: Float
+				pack: []
+				params: []
+				sub: null
+			})
+			value: null
+		}, {
+			meta: []
+			name: unmodifiedDistance
+			opt: false
+			type: TPath({
+				name: Float
+				pack: []
+				params: []
+				sub: null
+			})
+			value: null
+		}, {
+			meta: []
+			name: pos
+			opt: false
+			type: TPath({
+				name: Vector3
+				pack: []
+				params: []
+				sub: null
+			})
+			value: null
+		}, {
+			meta: []
+			name: column
+			opt: false
+			type: TPath({
+				name: Int
+				pack: []
+				params: []
+				sub: null
+			})
+			value: null
+		}, {
+			meta: []
+			name: player
+			opt: false
+			type: TPath({
+				name: Int
+				pack: []
+				params: []
+				sub: null
+			})
+			value: null
+		}]
+		expr: {
+			expr: EBlock([{
+				expr: EVars([{
+					expr: {
+						expr: EBinop(OpMult, {
+							expr: EConst(CIdent(time))
+							pos: #pos
+						}, {
+							expr: EConst(CFloat(0.001, null))
+							pos: #pos
+						})
+						pos: #pos
+					}
+					isFinal: false
+					isStatic: false
+					meta: []
+					name: sTime
+					namePos: #pos
+					type: TPath({
+						name: Float
+						pack: []
+						params: []
+						sub: null
+					})
+				}])
+				pos: #pos
+			}, {
+				expr: EBinop(OpAssignOp(OpAdd), {
+					expr: EField({
+						expr: EConst(CIdent(pos))
+						pos: #pos
+					}, x, Normal)
+					pos: #pos
+				}, {
+					expr: EBinop(OpMult, {
+						expr: EBinop(OpMult, {
+							expr: EBinop(OpMult, {
+								expr: ECall({
+									expr: EConst(CIdent(getValue))
+									pos: #pos
+								}, [{
+									expr: EConst(CString(tipsyx, DoubleQuotes))
+									pos: #pos
+								}, {
+									expr: EConst(CIdent(player))
+									pos: #pos
+								}])
+								pos: #pos
+							}, {
+								expr: ECall({
+									expr: EField({
+										expr: EConst(CIdent(Math))
+										pos: #pos
+									}, cos, Normal)
+									pos: #pos
+								}, [{
+									expr: EParenthesis({
+										expr: EBinop(OpAdd, {
+											expr: EBinop(OpMult, {
+												expr: EConst(CIdent(sTime))
+												pos: #pos
+											}, {
+												expr: EConst(CFloat(1.2, null))
+												pos: #pos
+											})
+											pos: #pos
+										}, {
+											expr: EBinop(OpMult, {
+												expr: EConst(CIdent(column))
+												pos: #pos
+											}, {
+												expr: EConst(CFloat(1.8, null))
+												pos: #pos
+											})
+											pos: #pos
+										})
+										pos: #pos
+									})
+									pos: #pos
+								}])
+								pos: #pos
+							})
+							pos: #pos
+						}, {
+							expr: EConst(CInt(64, null))
+							pos: #pos
+						})
+						pos: #pos
+					}, {
+						expr: EConst(CFloat(0.4, null))
+						pos: #pos
+					})
+					pos: #pos
+				})
+				pos: #pos
+			}, {
+				expr: EBinop(OpAssignOp(OpAdd), {
+					expr: EField({
+						expr: EConst(CIdent(pos))
+						pos: #pos
+					}, y, Normal)
+					pos: #pos
+				}, {
+					expr: EBinop(OpMult, {
+						expr: EBinop(OpMult, {
+							expr: EBinop(OpMult, {
+								expr: ECall({
+									expr: EConst(CIdent(getValue))
+									pos: #pos
+								}, [{
+									expr: EConst(CString(tipsy, DoubleQuotes))
+									pos: #pos
+								}, {
+									expr: EConst(CIdent(player))
+									pos: #pos
+								}])
+								pos: #pos
+							}, {
+								expr: ECall({
+									expr: EField({
+										expr: EConst(CIdent(Math))
+										pos: #pos
+									}, cos, Normal)
+									pos: #pos
+								}, [{
+									expr: EParenthesis({
+										expr: EBinop(OpAdd, {
+											expr: EBinop(OpMult, {
+												expr: EConst(CIdent(sTime))
+												pos: #pos
+											}, {
+												expr: EConst(CFloat(1.2, null))
+												pos: #pos
+											})
+											pos: #pos
+										}, {
+											expr: EBinop(OpMult, {
+												expr: EConst(CIdent(column))
+												pos: #pos
+											}, {
+												expr: EConst(CFloat(1.8, null))
+												pos: #pos
+											})
+											pos: #pos
+										})
+										pos: #pos
+									})
+									pos: #pos
+								}])
+								pos: #pos
+							})
+							pos: #pos
+						}, {
+							expr: EConst(CInt(64, null))
+							pos: #pos
+						})
+						pos: #pos
+					}, {
+						expr: EConst(CFloat(0.4, null))
+						pos: #pos
+					})
+					pos: #pos
+				})
+				pos: #pos
+			}, {
+				expr: EVars([{
+					expr: {
+						expr: EBinop(OpAdd, {
+							expr: EBinop(OpAdd, {
+								expr: EConst(CIdent(sTime))
+								pos: #pos
+							}, {
+								expr: EBinop(OpMult, {
+									expr: EConst(CIdent(column))
+									pos: #pos
+								}, {
+									expr: EConst(CFloat(0.2, null))
+									pos: #pos
+								})
+								pos: #pos
+							})
+							pos: #pos
+						}, {
+							expr: EBinop(OpDiv, {
+								expr: EBinop(OpMult, {
+									expr: EConst(CIdent(distance))
+									pos: #pos
+								}, {
+									expr: EConst(CInt(10, null))
+									pos: #pos
+								})
+								pos: #pos
+							}, {
+								expr: EConst(CInt(720, null))
+								pos: #pos
+							})
+							pos: #pos
+						})
+						pos: #pos
+					}
+					isFinal: false
+					isStatic: false
+					meta: []
+					name: angle
+					namePos: #pos
+					type: TPath({
+						name: Float
+						pack: []
+						params: []
+						sub: null
+					})
+				}])
+				pos: #pos
+			}, {
+				expr: EBinop(OpAssignOp(OpAdd), {
+					expr: EField({
+						expr: EConst(CIdent(pos))
+						pos: #pos
+					}, x, Normal)
+					pos: #pos
+				}, {
+					expr: EBinop(OpMult, {
+						expr: EBinop(OpMult, {
+							expr: EConst(CIdent(drunk))
+							pos: #pos
+						}, {
+							expr: ECall({
+								expr: EField({
+									expr: EConst(CIdent(Math))
+									pos: #pos
+								}, cos, Normal)
+								pos: #pos
+							}, [{
+								expr: EConst(CIdent(angle))
+								pos: #pos
+							}])
+							pos: #pos
+						})
+						pos: #pos
+					}, {
+						expr: EConst(CFloat(64.0, null))
+						pos: #pos
+					})
+					pos: #pos
+				})
+				pos: #pos
+			}, {
+				expr: EBinop(OpAssignOp(OpAdd), {
+					expr: EField({
+						expr: EConst(CIdent(pos))
+						pos: #pos
+					}, y, Normal)
+					pos: #pos
+				}, {
+					expr: EBinop(OpMult, {
+						expr: EBinop(OpMult, {
+							expr: ECall({
+								expr: EConst(CIdent(getValue))
+								pos: #pos
+							}, [{
+								expr: EConst(CString(drunky, DoubleQuotes))
+								pos: #pos
+							}, {
+								expr: EConst(CIdent(player))
+								pos: #pos
+							}])
+							pos: #pos
+						}, {
+							expr: ECall({
+								expr: EField({
+									expr: EConst(CIdent(Math))
+									pos: #pos
+								}, cos, Normal)
+								pos: #pos
+							}, [{
+								expr: EConst(CIdent(angle))
+								pos: #pos
+							}])
+							pos: #pos
+						})
+						pos: #pos
+					}, {
+						expr: EConst(CInt(32, null))
+						pos: #pos
+					})
+					pos: #pos
+				})
+				pos: #pos
+			}, {
+				expr: EBinop(OpAssignOp(OpAdd), {
+					expr: EField({
+						expr: EConst(CIdent(pos))
+						pos: #pos
+					}, z, Normal)
+					pos: #pos
+				}, {
+					expr: EBinop(OpMult, {
+						expr: EBinop(OpMult, {
+							expr: ECall({
+								expr: EConst(CIdent(getValue))
+								pos: #pos
+							}, [{
+								expr: EConst(CString(drunkz, DoubleQuotes))
+								pos: #pos
+							}, {
+								expr: EConst(CIdent(player))
+								pos: #pos
+							}])
+							pos: #pos
+						}, {
+							expr: ECall({
+								expr: EField({
+									expr: EConst(CIdent(Math))
+									pos: #pos
+								}, cos, Normal)
+								pos: #pos
+							}, [{
+								expr: EConst(CIdent(angle))
+								pos: #pos
+							}])
+							pos: #pos
+						})
+						pos: #pos
+					}, {
+						expr: EConst(CInt(32, null))
+						pos: #pos
+					})
+					pos: #pos
+				})
+				pos: #pos
+			}])
+			pos: #pos
+		}
+		params: []
+		ret: null
+	})
+	meta: []
+	name: modifyPos
+	pos: #pos
+}, {
+	access: null
+	doc: null
+	kind: null <- expected value
+	meta: null
+	name: null <- expected value
+	pos: null <- expected value
+}, {
+	access: [AStatic]
+	doc: null
+	kind: FFun({
+		args: []
+		expr: {
+			expr: EBlock([{
+				expr: EIf({
+					expr: EBinop(OpEq, {
+						expr: EField({
+							expr: EConst(CIdent(ModManager))
+							pos: #pos
+						}, modifiersToAdd, Normal)
+						pos: #pos
+					}, {
+						expr: EConst(CIdent(null))
+						pos: #pos
+					})
+					pos: #pos
+				}, {
+					expr: EBinop(OpAssign, {
+						expr: EField({
+							expr: EConst(CIdent(ModManager))
+							pos: #pos
+						}, modifiersToAdd, Normal)
+						pos: #pos
+					}, {
+						expr: EArrayDecl([])
+						pos: #pos
+					})
+					pos: #pos
+				}, null)
+				pos: #pos
+			}, {
+				expr: ECall({
+					expr: EField({
+						expr: EField({
+							expr: EConst(CIdent(ModManager))
+							pos: #pos
+						}, modifiersToAdd, Normal)
+						pos: #pos
+					}, push, Normal)
+					pos: #pos
+				}, [{
+					expr: EConst(CIdent(InebriationModifier))
+					pos: #pos
+				}])
+				pos: #pos
+			}])
+			pos: #pos
+		}
+		params: null
+		ret: null
+	})
+	meta: null
+	name: __init__
+	pos: #pos
+}]
+line 546: expected value
+line 548: expected value
+line 549: expected value
