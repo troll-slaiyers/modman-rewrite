@@ -300,9 +300,11 @@ final class ModifierMacro {
                             newValues.set(StringTools.replace(k, "%c", Std.string(i)), v);
                         }
                     }
-
+                    
                     values.push(newValues);
                     finalizedValues.push(newValues.copy());
+                    keyArray.push([for(k in newValues.keys())k]);
+
 
                     active.push(false);
                     finalizedActive.push(false);

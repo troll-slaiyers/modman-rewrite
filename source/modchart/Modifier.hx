@@ -16,6 +16,7 @@ import h3d.Vector as Vector3;
 class Modifier {
     #if true // Mostly internal variables
     var prefix: String = '';
+    var keyArray: Array<Array<String>> = [];
     public var parent: ModManager; // Where the modifier is from
     public var values: Array<Map<String, Float>> = []; // Target values
     public var active: Array<Bool> = []; // If this modifier *will be* active for a specific player
@@ -28,6 +29,7 @@ class Modifier {
     {
         this.parent = parent;
     }
+
 
 
     #if true // Stubs you should be replacing in your modifiers if required
@@ -65,8 +67,8 @@ class Modifier {
     public function reset(){
         for(pN in 0...values.length){
             var playerValues: Map<String, Float> = values[pN];
-            for(k => v in playerValues)
-                finalizedValues[pN].set(k, v);   
+            for(k in keyArray[pN])
+                finalizedValues[pN].set(k, playerValues.get(k));   
         }
 
         finalizedActive = active.copy();
